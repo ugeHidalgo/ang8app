@@ -6,6 +6,7 @@ import { BankAccountsComponent } from './components/main/bank-accounts/bank-acco
 import { GlobalsService } from './globals/globals.service';
 import { BankAccountsService } from './services/bankAccounts/bank-accounts.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     GlobalsService,
