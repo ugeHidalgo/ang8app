@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GlobalsService } from './globals/globals.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MoWizz - The money wizzard';
+
+  constructor ( protected globals: GlobalsService, private router: Router) {
+    const me = this,
+          username = "ugeHidalgo";
+
+    me.globals.setUser(username);
+    me.router.navigate(['/mainscreen']);
+  }
 }
