@@ -24,18 +24,22 @@
     </li>
 </ul> -->
 
-<!-- <button mat-button [matMenuTriggerFor]="aboveMenu">Archivos</button> -->
-<a class="menuItem" [routerLink]="['/mainscreen']">Inicio</a>
-<a class="menuItem" [matMenuTriggerFor]="aboveMenu">Archivos</a>
-<mat-menu #aboveMenu="matMenu" yPosition="below">
-  <div>
-      <a class="menuItem dropdown-item waves-light" mdbRippleRadius [routerLink]="['/bankaccounts']">Cuentas bancarias</a>
-  </div>
-  <div>
-      <a class="menuItem dropdown-item waves-light" mdbRippleRadius [routerLink]="['/concepts']">Conceptos</a>
-  </div>
+ <mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <span><a mat-button routerLink="/mainscreen">Inicio</a></span>
 
-</mat-menu>
+       <button mat-button [matMenuTriggerFor]="menuficheros">Ficheros</button>
+       <mat-menu yPosition="below" #menuficheros="matMenu">
+        <a mat-button routerLink="/bankaccounts">Cuentas</a>
+        <a mat-button routerLink="/concepts">Conceptos</a>
+      </mat-menu>
+
+       <span class="spacer"></span>
+
+       <a mat-button routerLink="/register">Register</a>
+       <a mat-button routerLink="/login">Login</a>
+    </mat-toolbar-row>
+ </mat-toolbar>
 
 <!-- <div class="toolbar" role="banner">
   <img

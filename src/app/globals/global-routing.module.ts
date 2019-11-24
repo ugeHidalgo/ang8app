@@ -6,8 +6,12 @@ import { BankAccountsComponent } from '../components/main/bankAccounts/bank-acco
 import { PageNotFoundComponent } from '../components/main/notFound/not-found.component';
 import { ConceptsComponent } from '../components/main/concepts/concepts/concepts.component';
 import { MainScreenComponent } from '../components/main/mainScreen/main-screen.component';
+import { LoginComponent } from '../login/login/login.component';
+import { RegisterComponent } from '../login/register/register.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'mainscreen', component: MainScreenComponent },
   { path: 'bankaccounts', component: BankAccountsComponent },
   { path: 'concepts', component: ConceptsComponent },
