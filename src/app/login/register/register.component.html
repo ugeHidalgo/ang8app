@@ -6,23 +6,23 @@
       <form class="my-form">
           <mat-form-field class="full-width">
             <mat-label>Nombre de usuario:</mat-label>
-            <input  matInput  placeholder="Nombre usuario"  name="username"  required>
+            <input  matInput  placeholder="Nombre usuario"  name="username"  [(ngModel)]="user.userName" required>
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Nombre</mat-label>
-            <input  matInput  placeholder="Nombre" name="name">
+            <input  matInput  placeholder="Nombre" [(ngModel)]="user.firstName" name="name">
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Apellidos</mat-label>
-            <input  matInput  placeholder="Apellidos" name="apellidos">
+            <input  matInput  placeholder="Apellidos" name="apellidos" [(ngModel)]="user.lastName">
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>e-Mail</mat-label>
-            <input  matInput  placeholder="e-Mail" name="email" required>
+            <input  matInput  placeholder="e-Mail" name="email" [(ngModel)]="user.eMail" required>
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Password</mat-label>
-            <input  matInput  placeholder="Password"  name="password" type="password" required>
+            <input  matInput  placeholder="Password"  name="password" [(ngModel)]="user.password" type="password" required>
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Repetir Password</mat-label>
