@@ -6,11 +6,11 @@
     <form class="my-form">
       <mat-form-field class="full-width">
         <mat-label>e-Mail</mat-label>
-        <input  matInput  placeholder="Email" name="email">
+        <input  matInput  placeholder="User name" name="userName" [(ngModel)]="model.userName">
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input  matInput  placeholder="Password" name="password">
+        <input  matInput  placeholder="Password" name="password" [(ngModel)]="model.password">
       </mat-form-field>
     </form>
   </mat-card-content>

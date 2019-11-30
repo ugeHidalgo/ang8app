@@ -36,8 +36,19 @@
 
        <span class="spacer"></span>
 
-       <a mat-button routerLink="/register">Register</a>
-       <a mat-button routerLink="/login">Login</a>
+       <!-- Login links-->
+       <ul *ngIf="globals.userNameLogged else notUserLogged" class="nav navbar-nav ml-auto">
+          <a mat-button routerLink="/user">{{globals.userNameLogged}}</a>
+          <a mat-button routerLink="/mainscreen" (click)="logout()">Cerrar sesión</a>
+      </ul>
+      <ng-template #notUserLogged>
+        <ul class="nav navbar-nav ml-auto">
+            <a mat-button routerLink="/register">Registro</a>
+            <a mat-button routerLink="/login">Iniciar sesión</a>
+        </ul>
+      </ng-template>
+    <!-- Links -->
+
     </mat-toolbar-row>
  </mat-toolbar>
 

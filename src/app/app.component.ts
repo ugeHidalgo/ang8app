@@ -17,4 +17,12 @@ export class AppComponent {
     me.globals.setUser(username);
     me.router.navigate(['/mainscreen']);
   }
+
+  logout() {
+    const me = this;
+
+    me.globals.clearUser();
+    me.globals.removeUserDataFromLocalStorage();
+    me.router.navigate(['/']);
+  }
 }

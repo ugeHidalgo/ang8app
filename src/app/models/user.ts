@@ -4,5 +4,8 @@ export class User {
   password: string;
   firstName: string;
   lastName: string;
+  active: boolean;
+  created: Date;
+  updated: Date;
   eMail: string;
 }

@@ -10,16 +10,23 @@ import { Observable } from 'rxjs';
 export class UsersService {
 
   private usersUrl;
+  private grantUserAccessUrl;
 
   constructor(
     private http: HttpClient,
     private globals: GlobalsService
   ) {
     this.usersUrl  = globals.server + 'api/users';
+    this.grantUserAccessUrl = globals.server + 'api/users/auth';
   }
 
-   /**.*/
-   registerUser(user: User): Observable<User> {
+  /**.*/
+  registerUser(user: User): Observable<User> {
     return this.http.post<User>(this.usersUrl, user);
+  }
+
+  /**.*/
+  isUserAuthenticated(userData: any): Observable<any> {
+    return this.http.post<any>(this.grantUserAccessUrl, userData);
   }
 }
