@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor ( protected globals: GlobalsService, private router: Router) {
     const me = this,
-          username = "ugeHidalgo";
+          username = me.globals.getUserNameFromLocalStorage();
 
     me.globals.setUser(username);
     me.router.navigate(['/mainscreen']);
