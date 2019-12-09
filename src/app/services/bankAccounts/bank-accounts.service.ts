@@ -52,10 +52,11 @@ export class BankAccountsService {
 
   /**.*/
   private createHttpOptionsWithToken() {
+    let authToken = this.globals.getTokenFromLocalStorage();
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization-token': ''
+        'Authorization': `Bearer ${authToken}`
       })
     };
   }
